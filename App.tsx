@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {SafeAreaView, StyleSheet, Pressable} from 'react-native';
-import Torch from 'react-native-torch';
+import React, {useState} from 'react';
+import {Pressable, SafeAreaView, StyleSheet} from 'react-native';
+
 import Icon from 'react-native-vector-icons/Feather';
 
 const App = () => {
@@ -9,10 +9,6 @@ const App = () => {
   const handleClick = () => {
     toggleTourche(!tourchIsOn);
   };
-
-  useEffect(() => {
-    Torch.switchState(tourchIsOn);
-  }, [tourchIsOn]);
 
   return (
     <SafeAreaView style={styles.container}>
