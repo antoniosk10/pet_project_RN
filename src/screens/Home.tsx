@@ -1,5 +1,5 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 type StackParamList = {
