@@ -1,52 +1,28 @@
-import React, {useState} from 'react';
-import {Pressable, SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Home from './src/screens/Home';
+import LiveCoding from './src/screens/LiveCoding';
+import Test from './src/screens/Test';
 
-import Icon from 'react-native-vector-icons/Feather';
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const [tourchIsOn, toggleTourche] = useState(false);
-
-  const handleClick = () => {
-    toggleTourche(!tourchIsOn);
-  };
-
   return (
-    <SafeAreaView style={styles.container}>
-      <Pressable style={styles.button} onPress={handleClick}>
-        <Icon
-          name="power"
-          size={100}
-          color={tourchIsOn ? '#FAFBEE' : '#42273B'}
-        />
-      </Pressable>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen name="Test" component={Test} />
+          <Stack.Screen name="LiveCoding" component={LiveCoding} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 200,
-    height: 200,
-    borderRadius: 200,
-    backgroundColor: '#7F0759',
-    shadowColor: '#42273B',
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.53,
-    shadowRadius: 13.97,
-
-    elevation: 21,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFF8F0',
-  },
-});
 
 export default App;
