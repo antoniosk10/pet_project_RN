@@ -55,11 +55,5 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|@react-native/|@react-native-community/|@react-navigation/.*|redux-persist/.*|moti/.*)"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
-    }
   }
 }
