@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "779160938876",
+    "project_id": "mymap-275909",
+    "storage_bucket": "mymap-275909.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779160938876:android:04e5f234d9ab3a4d025cf9",
+        "android_client_info": {
+          "package_name": "com.pet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779160938876-2phg6od0r6th3gqdb49kuhg0uc79iful.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmVgQH_nJd3sZ8Cm7bEyaPLKyzeWwLgIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779160938876-2phg6od0r6th3gqdb49kuhg0uc79iful.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "779160938876-13l6rbsvr6cd4b9p41spe2nqhtj97nnp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Pet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
